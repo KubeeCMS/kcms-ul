@@ -3,7 +3,7 @@
 /*
  * Plugin Name: KCMS User Login
  * Description: Expand your website dimensions by providing signup and login using mobile number. User can register and login with just a mobile number.
- * Version: 7.8.1.1
+ * Version: 7.8.1.2
  * Author: Kubee
  * Author URI: https://github.com/KubeeCMS/
  * Developer: Kubee
@@ -17,7 +17,7 @@
  * Copyright (c) 2014-2021 All rights reserved.
  * License: GNU General Public License v3.0
  * Text Domain: digits
- * Requires PHP: 5.5
+ * Requires PHP: 7.4
  * Domain Path: /languages
  */
 
@@ -25,16 +25,16 @@
 if (!defined('ABSPATH')) {
     exit;
 }
-update_site_option('dig_purchasecode', '**********************');
-update_site_option('dig_license_type', 1);
-update_site_option('dig_hid_activate_notice', true);
-update_option('dig_purchasecode', '8699958a-77f3-4db8-9422-126b0836e1c5');
-
 
 function digits_version()
 {
-    return '7.8.1.1';
+    return '7.8.1.2';
 }
+
+update_option('dig_purchasecode', '8699958a-77f3-4db8-9422-126b0836e1c5');
+update_site_option('dig_license_type', 1);
+update_site_option('dig_hid_activate_notice', true);
+
 
 global $dig_logingpage, $dig_save_details;
 $dig_logingpage = 0;
@@ -1000,7 +1000,7 @@ $DigitsUpdateChecker->addQueryArgFilter('dig_filter_update_checks');
 function dig_filter_update_checks($queryArgs)
 {
 
-  $digpc = '8699958a-77f3-4db8-9422-126b0836e1c5';
+   $digpc = '8699958a-77f3-4db8-9422-126b0836e1c5';
     $queryArgs['license_key'] = dig_get_option('dig_purchasecode');
     
     $queryArgs['request_site'] = dig_network_home_url();

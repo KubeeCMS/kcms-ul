@@ -1264,6 +1264,45 @@ function digits_additional_gateways_list()
                 __('Sender Address (last 4 digits)') => array('text' => true, 'name' => 'senderAddress'),
             ),
         ),
+        'wholesale' => array(
+            'value' => 170,
+            'require_addon' => 1,
+            'label' => 'WHOLESALESMS',
+            'inputs' => array(
+                __('Username') => array('text' => true, 'name' => 'username'),
+                __('Password') => array('text' => true, 'name' => 'password'),
+                __('From') => array('text' => true, 'name' => 'from', 'optional' => 1),
+            ),
+        ),
+        'turbosmstop' => array(
+            'value' => 171,
+            'require_addon' => 1,
+            'label' => 'turbosmstop',
+            'inputs' => array(
+                __('Access Token') => array('text' => true, 'name' => 'access_token'),
+                __('Sender ID') => array('text' => true, 'name' => 'sender_id', 'optional' => 1),
+            ),
+        ),
+        'mobilenetsa' => array(
+            'value' => 172,
+            'require_addon' => 1,
+            'label' => 'Mobile.net.sa',
+            'inputs' => array(
+                __('Username') => array('text' => true, 'name' => 'username'),
+                __('Password') => array('text' => true, 'name' => 'password'),
+                __('Sender') => array('text' => true, 'name' => 'sender', 'optional' => 1),
+            ),
+        ),
+        'eskizeu' => array(
+            'value' => 173,
+            'require_addon' => 1,
+            'label' => 'Eskiz.uz',
+            'inputs' => array(
+                __('Username') => array('text' => true, 'name' => 'username'),
+                __('Password') => array('text' => true, 'name' => 'password'),
+                __('Sender') => array('text' => true, 'name' => 'sender'),
+            ),
+        ),
 
     );
 }
